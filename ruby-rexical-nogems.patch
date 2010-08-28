@@ -1,0 +1,15 @@
+diff -ur tenderlove-rexical-151da0e-o/bin/rex tenderlove-rexical-151da0e/bin/rex
+--- tenderlove-rexical-151da0e-o/bin/rex	2010-08-28 12:52:19.000000000 -0600
++++ tenderlove-rexical-151da0e/bin/rex	2010-08-28 12:53:18.000000000 -0600
+@@ -12,7 +12,10 @@
+ 
+ ## ---------------------------------------------------------------------
+ 
+-require 'rubygems'
++begin
++  require 'rubygems'
++rescue LoadError
++end
+ require 'rexical'
+ 
+ Rexical::Cmd.new.run
